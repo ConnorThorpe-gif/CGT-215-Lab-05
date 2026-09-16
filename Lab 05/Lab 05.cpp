@@ -10,9 +10,9 @@ char encodeChar(char letter, vector<char> cipher) {
         return cipher[letter - 65]; // Return position in the cipher (A = 65-65 = 0 = V)
     }
     else if (letter >= 97 && letter <= 122) { // If letter is a-z get the uppercase cipher and covert to lowercase
-        char upper = letter - 32;
-        upper = cipher[upper - 65];
-        return upper + 32;
+        char uppercaseletter = letter - 32;
+        char uppercasecode = cipher[uppercaseletter - 65];
+        return uppercasecode + 32;
     }
     return letter; // Returns unique characters (?, spaces, *)
 }
